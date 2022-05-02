@@ -3,10 +3,10 @@ window.addEventListener('keydown', playSound);
 window.addEventListener('keyup', stop);
 
 //知道按鍵，觸發按键Unicode值
-// function play(e) {
-//     let keyboard = event.keyCode;
-//     console.log(keyboard);
-// }
+function play(e) {
+    let keyboard = event.keyCode;
+    console.log(keyboard);
+}
 
 function playSound(e) {
     let keyboard = event.keyCode;
@@ -46,3 +46,21 @@ function stop(e) {
         document.getElementById('key' + keyboard).classList.remove('playing');
     }
 }
+
+// //官方解法
+// window.addEventListener('keydown', function (e) {
+//     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+//     const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+//     if (!audio) return; //如果沒有找到，直接停止動作返回
+//     audio.currentTime = 0; //重製播放進度
+//     audio.play();
+//     key.classList.add('playing');
+// });
+
+// function removeTransition(e) {
+//     if (e.propertyName !== 'transform') return;
+//     this.classList.remove('playing');
+// }
+
+// const keys = Array.from(document.querySelectorAll('.key'));
+// keys.forEach( key => key.addEventListener('transitionend', removeTransition));

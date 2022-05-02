@@ -24,16 +24,7 @@ body {
     width: 100%;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-}
-.key-click {
-    border: 4px solid #7ddfe0a2;
-    border-radius: 10px;
-    background-color: #0000005b;
-    padding: 10px;
-    margin: 10px;
-    width: 100%;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+    transition: all 1.15s;
 }
 
 .key h1 {
@@ -51,4 +42,5 @@ body {
     border: 4px solid #ffcc00;
     box-shadow: 0 0 1rem #ffcc00;
     transform: scale(1.1);
+    transition: all 1.15s;
 }
